@@ -8,10 +8,7 @@ web services along with [S3](https://aws.amazon.com/s3/) and [DynamoDB](https://
 
 ## Installation
 
-1. Install aws-shell
-   ```
-   pip install aws-shell
-   ```
+1. Install [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 
 1. Configure
    ```
