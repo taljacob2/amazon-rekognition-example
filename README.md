@@ -1,6 +1,8 @@
 # amazon-rekognition-example
 
-Facial detect a list of customers, based on their facial picture, using the [Amazon Rekognition](https://aws.amazon.com/rekognition/) web service.
+Facial detect a list of customers, based on their facial picture, using the
+Amazon [Rekognition](https://aws.amazon.com/rekognition/) and [Lambda](https://aws.amazon.com/lambda/)
+web services along with [S3](https://aws.amazon.com/s3/) and [DynamoDB](https://aws.amazon.com/dynamodb/) databases.
 
 > ### Watch the [video tutorial](https://youtu.be/oHSesteFK5c)
 
