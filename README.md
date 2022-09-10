@@ -77,7 +77,7 @@ sequenceDiagram
     participant LambdaFunction as Lambda Function
     participant DynamoDB
     
-    U->>S3: insert many `.jpg`s to
+    U->>S3: insert a `.jpg` to
     S3->>LambdaFunction: triggers
     LambdaFunction->>DynamoDB: extracts Name and Faceprint from the image, and inserts to
     
