@@ -2,39 +2,38 @@
 
 Facial detect a list of customers, based on their facial picture, using the [Amazon Rekognition](https://aws.amazon.com/rekognition/) web service.
 
-## Commands
+> ### Watch the [video tutorial](https://youtu.be/oHSesteFK5c)
 
-Video Link: [https://youtu.be/oHSesteFK5c](https://youtu.be/oHSesteFK5c)
+## Installation
 
+1. Install aws-shell
+   ```
+   pip install aws-shell
+   ```
 
-- Install aws-shell
-```
-pip install aws-shell
-```
+1. Configure
+   ```
+   aws configure
+   ```
 
-- Configure
-```
-aws configure
-```
+1. Create A Collection On AWS Rekognition
+   ```
+   aws rekognition create-collection --collection-id facerecognition_collection --region us-east-1
+   ```
 
-- Create a collection on aws rekognition
-```
-aws rekognition create-collection --collection-id facerecognition_collection --region us-east-1
-```
+1. Create Table On DynamoDB
+   ```
+   aws dynamodb create-table --table-name facerecognition \
+   --attribute-definitions AttributeName=RekognitionId,AttributeType=S \
+   --key-schema AttributeName=RekognitionId,KeyType=HASH \
+   --provisioned-throughput ReadCapacityUnits=1,WriteCapacityUnits=1 \
+   --region us-east-1
+   ```
 
-- Create table on DynamoDB
-```
-aws dynamodb create-table --table-name facerecognition \
---attribute-definitions AttributeName=RekognitionId,AttributeType=S \
---key-schema AttributeName=RekognitionId,KeyType=HASH \
---provisioned-throughput ReadCapacityUnits=1,WriteCapacityUnits=1 \
---region us-east-1
-```
-
-- Create S3 bucket
-```
-aws s3 mb s3://bucket-name --region us-east-1
-```
+1. Create S3 Bucket
+   ```
+   aws s3 mb s3://bucket-name --region us-east-1
+   ```
 
 ## FAQ
 
