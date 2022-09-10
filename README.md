@@ -1,4 +1,8 @@
-# Commands
+# amazon-rekognition-example
+
+Facial detect a list of customers, based on their facial picture, using the [Amazon Rekognition](https://aws.amazon.com/rekognition/) web service.
+
+## Commands
 
 Video Link: [https://youtu.be/oHSesteFK5c](https://youtu.be/oHSesteFK5c)
 
