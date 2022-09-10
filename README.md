@@ -53,20 +53,23 @@ erDiagram
 
 A `Faceprint`, also known as `faceID`, is some-kind of a string key, that is
 generated as a response of analysing a specific image that was posted to
-Amazon Rekognition. On the other way, we can also send an already-generated
-`Faceprint` to Amazon Rekognition and it would respond us with the most
-accurate `Faceprint` it detects that had been already stored on the DynamoDB.
+Amazon Rekognition (See [graph](https://github.com/taljacob2/amazon-rekognition-example/tree/feat-update-readme#insert-a-new-image-to-dynamodb)).
+On the other way, we can also send an already-generated `Faceprint` to
+Amazon Rekognition and it would respond us with the most accurate `Faceprint`
+it detects that had been already stored on the DynamoDB (See [graph](https://github.com/taljacob2/amazon-rekognition-example/tree/feat-update-readme#detect-name-from-a-test-image)).
 
 ---
 
 ## Logic Explanation
+
+### Insert A New Image To DynamoDB
 
 ```mermaid
 sequenceDiagram
     autonumber
     
     actor U as User
-    note right of U: Insert a new image to DB
+    note right of U: Insert a new image to DynamoDB
         
     participant S3 as S3 Bucket
     participant LambdaFunction as Lambda Function
@@ -78,7 +81,7 @@ sequenceDiagram
     
 ```
 
----
+### Detect Name From A Test Image
 
 ```mermaid
 sequenceDiagram
